@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/config-eslint",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "scripts": {
@@ -20,12 +20,12 @@
     "eslint": "^7.18.0"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "eslint": ">=7",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-mocha": "^7.0.0",
-    "eslint-plugin-react": "^7.19.0",
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0"
+    "eslint-plugin-react": "^7.19.0"
   }
 }
