@@ -1,0 +1,19 @@
+{
+  "name": "@zzavidd/config-prettier",
+  "version": "1.0.0",
+  "description": "Prettier configuration for projects developed by Zavid Egbue.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzavidd/zavid-config.git"
+  },
+  "author": "Zavid Egbue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzavidd/zavid-config/issues"
+  },
+  "homepage": "https://github.com/zzavidd/zavid-config#readme"
+}
