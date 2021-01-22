@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/config-prettier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Prettier configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/zzavidd/zavid-config/issues"
   },
-  "homepage": "https://github.com/zzavidd/zavid-config#readme"
+  "homepage": "https://github.com/zzavidd/zavid-config#readme",
+  "gitHead": "76e7a69fdf35b626e20ce5a3cb853627e322c2fb"
 }
