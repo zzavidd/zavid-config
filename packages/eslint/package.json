@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zzavidd/zavid-config.git"
@@ -27,6 +30,5 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-mocha": "^7.0.0",
     "eslint-plugin-react": "^7.19.0"
-  },
-  "gitHead": "76e7a69fdf35b626e20ce5a3cb853627e322c2fb"
+  }
 }

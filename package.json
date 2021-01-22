@@ -4,7 +4,7 @@
   "description": "Formatting rules and configuration for projects worked on by Zavid.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "lerna publish --skip-git"
   },
   "repository": {
     "type": "git",
