@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/eslint-config",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "publishConfig": {
