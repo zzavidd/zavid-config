@@ -1,7 +1,7 @@
 {
-  "name": "@zzavidd/prettier-config",
-  "version": "0.1.4",
-  "description": "Prettier configuration for projects developed by Zavid Egbue.",
+  "name": "@zzavidd/stylelint-config",
+  "version": "1.0.0",
+  "description": "Stylelint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
@@ -14,10 +14,11 @@
   "license": "ISC",
   "homepage": "https://github.com/zzavidd/zavid-config#readme",
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "stylelint": "^13.9.0",
+    "stylelint-config-sass-guidelines": "^7.1.0"
   },
   "peerDependencies": {
-    "prettier": ">= 2.0.0"
-  },
-  "gitHead": "1f48709dcbd423707b98c900c0eff39ad0c3a956"
+    "stylelint": ">=13.0.0",
+    "stylelint-config-sass-guidelines": ">=7.0.0"
+  }
 }

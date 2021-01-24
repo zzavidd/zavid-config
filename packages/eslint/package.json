@@ -3,9 +3,6 @@
   "version": "0.1.4",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -15,9 +12,6 @@
   },
   "author": "Zavid Egbue",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zzavidd/zavid-config/issues"
-  },
   "homepage": "https://github.com/zzavidd/zavid-config#readme",
   "devDependencies": {
     "eslint": "^7.18.0"
