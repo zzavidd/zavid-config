@@ -14,18 +14,16 @@
   "license": "ISC",
   "homepage": "https://github.com/zzavidd/zavid-config#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
-    "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-mocha": "^7.0.0",
-    "eslint-plugin-react": "^7.19.0"
+    "@typescript-eslint/parser": "^4.7.0"
   },
   "devDependencies": {
     "eslint": "^7.18.0"
   },
   "peerDependencies": {
-    "eslint": ">=7"
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "eslint": ">=7",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.19.0"
   },
   "gitHead": "1f48709dcbd423707b98c900c0eff39ad0c3a956"
 }

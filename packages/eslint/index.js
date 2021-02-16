@@ -4,13 +4,11 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:mocha/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   env: {
     browser: true,
     node: true,
-    mocha: true,
     es6: true,
   },
   parser: '@typescript-eslint/parser',
@@ -21,7 +19,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['react', 'filenames', 'import', 'mocha', '@typescript-eslint'],
+  plugins: ['react', 'import', '@typescript-eslint'],
   root: true,
   settings: {
     'import/resolver': {
@@ -36,7 +34,6 @@ module.exports = {
     },
   },
   rules: {
-    'filenames/match-regex': ['error', '^\\_?([a-z0-9]+[-|\\.]?)+$', true],
     'import/no-unresolved': ['error'],
     'import/order': [
       'warn',
@@ -96,9 +93,6 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'mocha/handle-done-callback': 'off',
-    'mocha/no-top-level-hooks': 'off',
-    'mocha/no-hooks-for-single-case': 'off',
     'no-case-declarations': 'off',
     'no-useless-escape': 'off',
     quotes: 'off',
