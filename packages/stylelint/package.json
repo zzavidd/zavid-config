@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "Stylelint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint *.scss --config index.js"
+  },
   "publishConfig": {
     "access": "public"
   },
