@@ -35,40 +35,6 @@ module.exports = {
   },
   rules: {
     'import/no-unresolved': ['error'],
-    'import/order': [
-      'warn',
-      {
-        groups: ['external', 'builtin', 'internal', 'sibling'],
-        pathGroups: [
-          {
-            pattern: 'components/**',
-            group: 'internal',
-            position: 'after',
-          },
-          {
-            pattern: 'constants/**',
-            group: 'internal',
-            position: 'after',
-          },
-          {
-            pattern: 'pages/**',
-            group: 'internal',
-            position: 'after',
-          },
-          {
-            pattern: 'styles/**',
-            group: 'internal',
-            position: 'after',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['internal'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
     'no-multiple-empty-lines': [
       'warn',
       {
@@ -76,7 +42,7 @@ module.exports = {
       },
     ],
     'no-unreachable': 'warn',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'no-console': [
       'warn',
       {
