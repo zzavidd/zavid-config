@@ -21,3 +21,11 @@ In your `package.json`, add the following top-level properties:
 },
 "prettier": "@zzavidd/prettier-config",
 ```
+
+## Update configuration
+
+To force-update the installed configuration, run the following command:
+
+```
+npm i -D @zzavidd/eslint-config@latest @zzavidd/stylelint-config@latest @zzavidd/prettier-config@latest
+```
