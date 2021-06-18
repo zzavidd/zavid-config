@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/stylelint-config",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Stylelint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,5 @@
     "stylelint": ">=13.0.0",
     "stylelint-config-sass-guidelines": ">=7.0.0"
   },
-  "gitHead": "356a7e0883849e7bc6327367a0f3f54386ee764a",
-  "dependencies": {}
+  "gitHead": "356a7e0883849e7bc6327367a0f3f54386ee764a"
 }
