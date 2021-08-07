@@ -4,7 +4,7 @@
   "description": "Stylelint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "scripts": {
-    "stylelint": "stylelint **/*.scss --config index.js",
+    "stylelint": "stylelint **/*.*css --config index.js",
     "test": "mocha"
   },
   "publishConfig": {

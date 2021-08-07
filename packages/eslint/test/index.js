@@ -1,0 +1,1 @@
+console.time('hello');

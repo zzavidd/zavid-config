@@ -60,7 +60,7 @@ module.exports = {
     'no-console': [
       'warn',
       {
-        allow: ['warn', 'error', 'info'],
+        allow: ['warn', 'error', 'info', 'time', 'timeEnd'],
       },
     ],
     semi: ['error', 'always'],
