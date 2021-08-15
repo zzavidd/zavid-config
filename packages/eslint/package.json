@@ -4,7 +4,7 @@
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint **/*.js --config index.js"
+    "eslint": "eslint --ext .js,.ts,.tsx --config index.js ."
   },
   "publishConfig": {
     "access": "public"
@@ -17,11 +17,13 @@
   "license": "ISC",
   "homepage": "https://github.com/zzavidd/zavid-config#readme",
   "devDependencies": {
+    "@types/react": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "eslint": "^7.18.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-react": "^7.24.0",
+    "react": "^17.0.2",
     "typescript": "^4.3.5"
   },
   "peerDependencies": {

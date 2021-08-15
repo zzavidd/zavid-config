@@ -34,20 +34,20 @@ module.exports = {
     },
   },
   rules: {
-    "import/named": 0,
-    "import/namespace": 0,
+    'import/named': 0,
+    'import/namespace': 0,
     'import/no-unresolved': ['error'],
-    "import/order": [
+    'import/order': [
       1,
       {
-        "groups": ["external", "builtin", "internal", "sibling"],
-        "pathGroupsExcludedImportTypes": ["internal"],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
+        groups: ['external', 'builtin', 'internal', 'sibling'],
+        pathGroupsExcludedImportTypes: ['internal'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
     ],
     'no-multiple-empty-lines': [
       'warn',
@@ -72,12 +72,16 @@ module.exports = {
       },
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    "@typescript-eslint/no-explicit-any": 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'no-case-declarations': 'off',
     'no-useless-escape': 'off',
     quotes: 'off',
     'react/display-name': 'off',
+    'react/jsx-curly-brace-presence': [
+      'warn',
+      { props: 'always', children: 'ignore' },
+    ],
     'react/prop-types': 'off',
   },
 };
