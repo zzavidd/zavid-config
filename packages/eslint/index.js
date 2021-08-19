@@ -34,6 +34,7 @@ module.exports = {
     },
   },
   rules: {
+    'eol-last': [1, 'always'],
     'import/named': 0,
     'import/namespace': 0,
     'import/no-unresolved': ['error'],
