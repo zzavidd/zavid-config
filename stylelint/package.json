@@ -1,0 +1,20 @@
+{
+  "name": "@zzavidd/stylelint-config",
+  "version": "0.2.14",
+  "description": "Stylelint configuration for projects developed by Zavid Egbue.",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint **/*.*css --config index.js",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.1",
+    "stylelint": "^13.9.0",
+    "stylelint-config-sass-guidelines": "^7.1.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=13.0.0",
+    "stylelint-config-sass-guidelines": ">=7.0.0"
+  },
+  "gitHead": "356a7e0883849e7bc6327367a0f3f54386ee764a"
+}
