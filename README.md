@@ -7,7 +7,7 @@ The ESLint, Prettier and Stylelint configurations for TypeScript React projects 
 First, install all required dependencies:
 
 ```
-npm i -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint stylelint prettier @typescript-eslint/eslint-plugin eslint-plugin-import eslint-plugin-react stylelint-config-sass-guidelines
+npm i -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint stylelint prettier @typescript-eslint/eslint-plugin @typescript-eslint/eslint-parser eslint-plugin-import eslint-plugin-react stylelint-config-sass-guidelines
 ```
 
 In your `package.json`, add the following top-level properties:

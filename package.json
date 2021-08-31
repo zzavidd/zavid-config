@@ -4,8 +4,7 @@
   "description": "Formatting rules and configuration for projects worked on by Zavid.",
   "main": "index.js",
   "scripts": {
-    "release": "lerna publish --yes",
-    "release:force": "lerna publish --force-publish --yes"
+    "release": "lerna publish --force-publish --yes"
   },
   "repository": {
     "type": "git",
