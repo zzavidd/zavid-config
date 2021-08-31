@@ -30,7 +30,7 @@ module.exports = {
     },
     'import/ignore': ['.json', '.scss', '.ejs'],
     react: {
-      version: 'detect',
+      version: 'latest',
     },
   },
   rules: {
