@@ -27,5 +27,5 @@ In your `package.json`, add the following top-level properties:
 To force-update the installed configuration, run the following command:
 
 ```
-npm update @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config
+npm i -D @zzavidd/eslint-config@latest @zzavidd/stylelint-config@latest @zzavidd/prettier-config@latest
 ```
