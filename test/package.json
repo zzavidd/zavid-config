@@ -1,0 +1,38 @@
+{
+  "name": "eslint-app",
+  "version": "0.1.0",
+  "private": true,
+  "eslintConfig": {
+    "extends": "@zzavidd/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@zzavidd/stylelint-config"
+  },
+  "prettier": "@zzavidd/prettier-config",
+  "scripts": {
+    "dev": "next dev",
+    "eslint": "eslint --ext .js,.ts,.tsx .",
+    "stylelint": "stylelint **/*.{css,scss}"
+  },
+  "dependencies": {
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "@zzavidd/eslint-config": "file:../eslint",
+    "@zzavidd/prettier-config": "file:../prettier",
+    "@zzavidd/stylelint-config": "file:../stylelint",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-react": "^7.25.1",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "typescript": "4.4.2"
+  }
+}

@@ -1,4 +1,12 @@
+const {
+  baseRules,
+  importEslintPlugin,
+  reactRules,
+  typesScriptEslintRules,
+} = require('./rules');
+
 module.exports = {
+  root: true,
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -13,76 +21,21 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
   plugins: ['react', 'import', '@typescript-eslint'],
-  root: true,
   settings: {
-    'import/resolver': {
-      node: {
-        moduleDirectory: ['node_modules', '.'],
-        extensions: ['.js', '.ts', '.tsx'],
-      },
-    },
-    'import/ignore': ['.json', '.scss', '.ejs'],
-    react: {
-      version: 'latest',
-    },
+    ...importEslintPlugin.settings,
+    ...reactRules.settings,
   },
   rules: {
-    'eol-last': [1, 'always'],
-    'import/named': 0,
-    'import/namespace': 0,
-    'import/no-unresolved': ['error'],
-    'import/order': [
-      1,
-      {
-        groups: ['external', 'builtin', 'internal', 'sibling'],
-        pathGroupsExcludedImportTypes: ['internal'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
-    'no-multiple-empty-lines': [
-      'warn',
-      {
-        max: 1,
-      },
-    ],
-    'no-unreachable': 'warn',
-    'no-unused-vars': 'off',
-    'no-console': [
-      'warn',
-      {
-        allow: ['warn', 'error', 'info', 'time', 'timeEnd'],
-      },
-    ],
-    semi: ['error', 'always'],
-    'spaced-comment': [
-      'warn',
-      'always',
-      {
-        exceptions: ['*'],
-      },
-    ],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    'no-case-declarations': 'off',
-    'no-useless-escape': 'off',
-    quotes: 'off',
-    'react/display-name': 'off',
-    'react/jsx-curly-brace-presence': [
-      'warn',
-      { props: 'always', children: 'ignore' },
-    ],
-    'react/prop-types': 'off',
+    ...baseRules,
+    ...importEslintPlugin.rules,
+    ...typesScriptEslintRules,
+    ...reactRules.rules,
   },
 };
