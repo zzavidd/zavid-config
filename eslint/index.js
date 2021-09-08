@@ -10,6 +10,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:@typescript-eslint/recommended',
@@ -27,7 +28,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['react', 'import', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', 'import', '@typescript-eslint'],
   settings: {
     ...importEslintPlugin.settings,
     ...reactRules.settings,
