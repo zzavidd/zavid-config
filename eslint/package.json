@@ -3,9 +3,6 @@
   "version": "0.2.14",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
-  "scripts": {
-    "eslint": "eslint --ext .js,.ts,.tsx --config index.js ."
-  },
   "devDependencies": {
     "@types/react": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.29.0",

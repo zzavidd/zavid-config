@@ -17,6 +17,8 @@ const Home: NextPage = () => {
           Welcome to <a href={'https://nextjs.org'}>Next.js!</a>
         </h1>
 
+        <img />
+
         <p>
           Get started by editing <code>pages/index.js</code>
         </p>
