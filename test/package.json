@@ -2,11 +2,18 @@
   "name": "eslint-app",
   "version": "0.1.0",
   "private": true,
+  "eslintConfig": {
+    "extends": "@zzavidd/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@zzavidd/stylelint-config"
+  },
+  "prettier": "@zzavidd/prettier-config",
+  
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "eslint": "eslint --ext .js,.ts,.tsx .",
+    "stylelint": "stylelint **/*.{css,scss}"
   },
   "dependencies": {
     "next": "11.1.2",
