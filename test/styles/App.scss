@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+$color-body: #fcffeb;
+$color-border: adjust-color(
+  $color-body,
+  $hue: -10%,
+  $saturation: -50%,
+  $lightness: -20%
+);

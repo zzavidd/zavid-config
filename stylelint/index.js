@@ -4,6 +4,7 @@ const SELECTOR_PATTERN =
 module.exports = {
   extends: 'stylelint-config-sass-guidelines',
   rules: {
+    'function-parentheses-space-inside': 'never-single-line',
     'max-nesting-depth': 5,
     'selector-class-pattern': SELECTOR_PATTERN,
     'selector-max-compound-selectors': 5,
