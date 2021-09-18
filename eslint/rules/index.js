@@ -12,7 +12,7 @@ const baseRules = {
   'no-console': [
     'warn',
     {
-      allow: ['warn', 'error', 'info', 'time', 'timeEnd'],
+      allow: ['dir', 'warn', 'error', 'info', 'time', 'timeEnd'],
     },
   ],
   semi: ['error', 'always'],
