@@ -2,6 +2,7 @@
   "name": "eslint-app",
   "version": "0.3.2",
   "private": true,
+  "type": "module",
   "eslintConfig": {
     "extends": "@zzavidd/eslint-config"
   },

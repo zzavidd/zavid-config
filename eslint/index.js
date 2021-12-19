@@ -13,14 +13,12 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:@typescript-eslint/recommended',
   ],
   env: {
     browser: true,
     node: true,
     es6: true,
   },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -28,7 +26,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['react', 'react-hooks', 'import', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', 'import'],
   settings: {
     ...importEslintPlugin.settings,
     ...reactRules.settings,
@@ -36,7 +34,15 @@ module.exports = {
   rules: {
     ...baseRules,
     ...importEslintPlugin.rules,
-    ...typesScriptEslintRules,
     ...reactRules.rules,
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: typesScriptEslintRules
+    },
+  ],
 };

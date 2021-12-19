@@ -1,6 +1,16 @@
-/** The base rules available without plugins. */
+/**
+ * The base rules available without plugins.
+ * @type {import('eslint').Linter.RulesRecord}
+ */
 const baseRules = {
   'eol-last': [1, 'always'],
+  'no-case-declarations': 'off',
+  'no-console': [
+    'warn',
+    {
+      allow: ['dir', 'warn', 'error', 'info', 'time', 'timeEnd'],
+    },
+  ],
   'no-multiple-empty-lines': [
     'warn',
     {
@@ -9,12 +19,9 @@ const baseRules = {
   ],
   'no-unreachable': 'warn',
   'no-unused-vars': 'off',
-  'no-console': [
-    'warn',
-    {
-      allow: ['dir', 'warn', 'error', 'info', 'time', 'timeEnd'],
-    },
-  ],
+  'no-useless-escape': 'off',
+  'require-await': 'warn',
+  quotes: 'off',
   semi: ['error', 'always'],
   'spaced-comment': [
     'warn',
@@ -23,12 +30,12 @@ const baseRules = {
       exceptions: ['*'],
     },
   ],
-  'no-case-declarations': 'off',
-  'no-useless-escape': 'off',
-  quotes: 'off',
 };
 
-/** The rules allowed by the import plugin. */
+/**
+ * The rules allowed by the import plugin.
+ * @type {import('eslint').Linter.Config}
+ */
 const importEslintPlugin = {
   settings: {
     'import/resolver': {
@@ -58,7 +65,10 @@ const importEslintPlugin = {
   },
 };
 
-/** The rules allowed by the React plugin. */
+/**
+ * The rules allowed by the React plugin.
+ * @type {import('eslint').Linter.Config}
+ */
 const reactRules = {
   settings: {
     react: {
@@ -75,11 +85,26 @@ const reactRules = {
   },
 };
 
-/** The rules allowed by the TypeScript ESLint plugin. */
+
+/**
+ * The rules allowed by the TypeScript ESLint plugin.
+ * @type {import('eslint').Linter.RulesRecord}
+ */
 const typesScriptEslintRules = {
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/no-namespace': 'off',
   '@typescript-eslint/no-non-null-assertion': 'off',
+  '@typescript-eslint/explicit-function-return-type': [
+    'warn',
+    {
+      allowExpressions: true,
+      allowTypedFunctionExpressions: true,
+      allowHigherOrderFunctions: true,
+      allowDirectConstAssertionInArrowFunctions: true,
+      allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+    },
+  ],
 };
 
 module.exports = {
