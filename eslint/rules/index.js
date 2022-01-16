@@ -67,6 +67,7 @@ const importEslintPlugin = {
           order: 'asc',
           caseInsensitive: true,
         },
+        warnOnUnassignedImports: true
       },
     ],
   },

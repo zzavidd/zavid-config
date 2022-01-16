@@ -2,10 +2,6 @@
   "name": "eslint-app",
   "version": "0.3.3",
   "private": true,
-  "type": "module",
-  "eslintConfig": {
-    "extends": "@zzavidd/eslint-config"
-  },
   "stylelint": {
     "extends": "@zzavidd/stylelint-config"
   },
