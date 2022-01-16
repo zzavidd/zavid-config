@@ -53,7 +53,14 @@ const importEslintPlugin = {
     'import/order': [
       1,
       {
-        groups: ['external', 'builtin', 'internal', 'sibling'],
+        groups: [
+          'type',
+          ['external', 'builtin'],
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
         pathGroupsExcludedImportTypes: ['internal'],
         'newlines-between': 'always',
         alphabetize: {
@@ -84,7 +91,6 @@ const reactRules = {
     'react/prop-types': 'off',
   },
 };
-
 
 /**
  * The rules allowed by the TypeScript ESLint plugin.
