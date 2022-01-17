@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "license": "MIT",
   "exports": {
