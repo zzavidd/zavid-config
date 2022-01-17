@@ -4,6 +4,7 @@
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "license": "MIT",
   "exports": {
+    ".": "./variants/react.typescript.js",
     "./node-js": "./variants/node.js",
     "./node-ts": "./variants/node.typescript.js",
     "./react-js": "./variants/react.js",
