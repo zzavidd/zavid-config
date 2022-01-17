@@ -34,43 +34,52 @@ const baseRules = {
 
 /**
  * The rules allowed by the import plugin.
- * @type {import('eslint').Linter.Config}
+ * @param isTypeScript True if TypeScript project.
+ * @return {import('eslint').Linter.Config}
  */
-const importEslintPlugin = {
-  settings: {
-    'import/resolver': {
-      node: {
-        moduleDirectory: ['node_modules', '.'],
-        extensions: ['.js', '.ts', '.tsx'],
-      },
+const importEslintPlugin = (isTypeScript) => {
+  const importResolverSettings = {
+    node: {
+      moduleDirectory: ['node_modules', '.'],
+      extensions: ['.js', '.ts', '.tsx'],
     },
-    'import/ignore': ['.json', '.scss', '.ejs'],
-  },
-  rules: {
-    'import/named': 0,
-    'import/namespace': 0,
-    'import/no-unresolved': ['error'],
-    'import/order': [
-      1,
-      {
-        groups: [
-          'type',
-          ['external', 'builtin'],
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        pathGroupsExcludedImportTypes: ['internal'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
+  };
+
+  if (isTypeScript) {
+    importResolverSettings.typescript = {};
+  }
+  
+  return {
+    settings: {
+      'import/resolver': importResolverSettings,
+      'import/ignore': ['.json', '.scss', '.ejs'],
+    },
+    rules: {
+      'import/named': 0,
+      'import/namespace': 0,
+      'import/no-unresolved': ['error'],
+      'import/order': [
+        1,
+        {
+          groups: [
+            'type',
+            ['external', 'builtin'],
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
+          pathGroupsExcludedImportTypes: ['internal'],
+          'newlines-between': 'always',
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+          warnOnUnassignedImports: true,
         },
-        warnOnUnassignedImports: true
-      },
-    ],
-  },
+      ],
+    },
+  };
 };
 
 /**
