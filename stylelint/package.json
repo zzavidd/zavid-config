@@ -11,9 +11,9 @@
     "stylelint": "^14.2.0",
     "stylelint-config-sass-guidelines": "^9.0.1"
   },
-  "bundledDependencies": [
-    "stylelint",
-    "stylelint-config-sass-guidelines"
-  ],
+  "peerDependencies": {
+    "stylelint": ">=14.0.0",
+    "stylelint-config-sass-guidelines": ">=9.0.0"
+},
   "gitHead": "356a7e0883849e7bc6327367a0f3f54386ee764a"
 }

@@ -6,8 +6,8 @@
   "dependencies": {
     "prettier": "^2.5.1"
   },
-  "bundledDependencies": [
-    "prettier"
-  ],
+  "peerDependencies": {
+    "prettier": ">=2.2.0"
+  },
   "gitHead": "356a7e0883849e7bc6327367a0f3f54386ee764a"
 }
