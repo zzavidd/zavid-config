@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'import'],
   settings: {
-    ...importEslintPlugin.settings,
+    ...importEslintPlugin.settings(true),
     ...reactRules.settings,
   },
   rules: {

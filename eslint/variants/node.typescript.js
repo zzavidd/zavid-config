@@ -20,7 +20,7 @@ module.exports = {
   },
   plugins: ['import'],
   settings: {
-    ...importEslintPlugin.settings,
+    ...importEslintPlugin.settings(true),
   },
   rules: {
     ...baseRules,

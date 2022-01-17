@@ -34,52 +34,51 @@ const baseRules = {
 
 /**
  * The rules allowed by the import plugin.
- * @param isTypeScript True if TypeScript project.
+ * @param {boolean} isTypeScript True if TypeScript project.
  * @return {import('eslint').Linter.Config}
  */
-const importEslintPlugin = (isTypeScript) => {
-  const importResolverSettings = {
-    node: {
-      moduleDirectory: ['node_modules', '.'],
-      extensions: ['.js', '.ts', '.tsx'],
-    },
-  };
+const importEslintPlugin = {
+  settings: (isTypeScript = false) => {
+    const importResolverSettings = {
+      node: {
+        moduleDirectory: ['node_modules', '.'],
+        extensions: ['.js', '.ts', '.tsx'],
+      },
+    };
 
-  if (isTypeScript) {
-    importResolverSettings.typescript = {};
-  }
-  
-  return {
-    settings: {
+    if (isTypeScript) {
+      importResolverSettings.typescript = {};
+    }
+    return {
       'import/resolver': importResolverSettings,
       'import/ignore': ['.json', '.scss', '.ejs'],
-    },
-    rules: {
-      'import/named': 0,
-      'import/namespace': 0,
-      'import/no-unresolved': ['error'],
-      'import/order': [
-        1,
-        {
-          groups: [
-            'type',
-            ['external', 'builtin'],
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
-          pathGroupsExcludedImportTypes: ['internal'],
-          'newlines-between': 'always',
-          alphabetize: {
-            order: 'asc',
-            caseInsensitive: true,
-          },
-          warnOnUnassignedImports: true,
+    };
+  },
+  rules: {
+    'import/named': 0,
+    'import/namespace': 0,
+    'import/no-unresolved': ['error'],
+    'import/order': [
+      1,
+      {
+        groups: [
+          'type',
+          ['external', 'builtin'],
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        pathGroupsExcludedImportTypes: ['internal'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
         },
-      ],
-    },
-  };
+        warnOnUnassignedImports: true,
+      },
+    ],
+  },
 };
 
 /**

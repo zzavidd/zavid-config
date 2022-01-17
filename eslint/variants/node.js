@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: ['import'],
   settings: {
-    ...importEslintPlugin.settings,
+    ...importEslintPlugin.settings(),
   },
   rules: {
     ...baseRules,
