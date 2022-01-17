@@ -7,14 +7,13 @@
     "stylelint": "stylelint **/*.*css --config index.js",
     "test": "mocha"
   },
-  "devDependencies": {
-    "mocha": "^8.3.1",
-    "stylelint": "^13.9.0",
-    "stylelint-config-sass-guidelines": "^7.1.0"
+  "dependencies": {
+    "stylelint": "^14.2.0",
+    "stylelint-config-sass-guidelines": "^9.0.1"
   },
-  "peerDependencies": {
-    "stylelint": ">=13.0.0",
-    "stylelint-config-sass-guidelines": ">=7.0.0"
-  },
+  "bundledDependencies": [
+    "stylelint",
+    "stylelint-config-sass-guidelines"
+  ],
   "gitHead": "356a7e0883849e7bc6327367a0f3f54386ee764a"
 }
