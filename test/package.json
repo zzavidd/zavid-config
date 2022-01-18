@@ -1,6 +1,6 @@
 {
   "name": "eslint-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "stylelint": {
     "extends": "@zzavidd/stylelint-config"
