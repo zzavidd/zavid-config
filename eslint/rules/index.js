@@ -2,7 +2,7 @@
  * The base rules available without plugins.
  * @type {import('eslint').Linter.RulesRecord}
  */
-const baseRules = {
+exports.baseRules = {
   'eol-last': [1, 'always'],
   'no-case-declarations': 'off',
   'no-console': [
@@ -34,25 +34,26 @@ const baseRules = {
 
 /**
  * The rules allowed by the import plugin.
- * @param {boolean} isTypeScript True if TypeScript project.
- * @return {import('eslint').Linter.Config}
  */
-const importEslintPlugin = {
-  settings: (isTypeScript = false) => {
-    const importResolverSettings = {
+exports.importConfig = {
+  settings: {
+    'import/ignore': ['.json', '.scss', '.ejs'],
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', '.'],
+        extensions: ['.js'],
+      },
+    },
+  },
+  settingsTypeScript: {
+    'import/ignore': ['.json', '.scss', '.ejs'],
+    'import/resolver': {
       node: {
         moduleDirectory: ['node_modules', '.'],
         extensions: ['.js', '.ts', '.tsx'],
       },
-    };
-
-    if (isTypeScript) {
-      importResolverSettings.typescript = {};
-    }
-    return {
-      'import/resolver': importResolverSettings,
-      'import/ignore': ['.json', '.scss', '.ejs'],
-    };
+      typescript: {},
+    },
   },
   rules: {
     'import/named': 0,
@@ -85,7 +86,7 @@ const importEslintPlugin = {
  * The rules allowed by the React plugin.
  * @type {import('eslint').Linter.Config}
  */
-const reactRules = {
+exports.reactConfig = {
   settings: {
     react: {
       version: 'latest',
@@ -105,7 +106,7 @@ const reactRules = {
  * The rules allowed by the TypeScript ESLint plugin.
  * @type {import('eslint').Linter.RulesRecord}
  */
-const typesScriptEslintRules = {
+exports.typescriptRules = {
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/no-namespace': 'off',
@@ -120,11 +121,4 @@ const typesScriptEslintRules = {
       allowConciseArrowFunctionExpressionsStartingWithVoid: true,
     },
   ],
-};
-
-module.exports = {
-  baseRules,
-  importEslintPlugin,
-  reactRules,
-  typesScriptEslintRules,
 };

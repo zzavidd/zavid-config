@@ -1,7 +1,7 @@
 const {
   baseRules,
-  importEslintPlugin,
-  typesScriptEslintRules,
+  typescriptRules,
+  importConfig,
 } = require('../rules');
 
 module.exports = {
@@ -12,19 +12,15 @@ module.exports = {
   ],
   env: {
     node: true,
-    es6: true,
-  },
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    es2021: true,
   },
   plugins: ['import'],
   settings: {
-    ...importEslintPlugin.settings(true),
+    ...importConfig.settingsTypeScript,
   },
   rules: {
     ...baseRules,
-    ...importEslintPlugin.rules,
+    ...importConfig.rules,
   },
   overrides: [
     {
@@ -32,7 +28,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
-      rules: typesScriptEslintRules,
+      rules: typescriptRules,
     },
   ],
 };

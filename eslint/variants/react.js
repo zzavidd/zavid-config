@@ -1,4 +1,8 @@
-const { baseRules, importEslintPlugin, reactRules } = require('../rules');
+const {
+  baseRules,
+  importConfig,
+  reactConfig,
+} = require('../rules');
 
 module.exports = {
   extends: [
@@ -11,16 +15,16 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es2021: true,
   },
   plugins: ['react', 'react-hooks', 'import'],
   settings: {
-    ...importEslintPlugin.settings(),
-    ...reactRules.settings,
+    ...importConfig.settings,
+    ...reactConfig.settings,
   },
   rules: {
     ...baseRules,
-    ...importEslintPlugin.rules,
-    ...reactRules.rules,
+    ...importConfig.rules,
+    ...reactConfig.rules,
   },
 };

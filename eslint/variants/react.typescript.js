@@ -1,8 +1,8 @@
 const {
   baseRules,
-  importEslintPlugin,
-  reactRules,
-  typesScriptEslintRules,
+  importConfig,
+  reactConfig,
+  typescriptRules,
 } = require('../rules');
 
 module.exports = {
@@ -24,13 +24,13 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'import'],
   settings: {
-    ...importEslintPlugin.settings(true),
-    ...reactRules.settings,
+    ...importConfig.settingsTypeScript,
+    ...reactConfig.settings,
   },
   rules: {
     ...baseRules,
-    ...importEslintPlugin.rules,
-    ...reactRules.rules,
+    ...importConfig.rules,
+    ...reactConfig.rules,
   },
   overrides: [
     {
@@ -38,7 +38,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
-      rules: typesScriptEslintRules,
+      rules: typescriptRules,
     },
   ],
 };

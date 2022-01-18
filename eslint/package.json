@@ -10,6 +10,9 @@
     "./react-js": "./variants/react.js",
     "./react-ts": "./variants/react.typescript.js"
   },
+  "scripts": {
+    "eslint": "eslint --ext .js ."
+  },
   "dependencies": {
     "eslint": "^8.7.0",
     "eslint-plugin-import": "^2.23.4"

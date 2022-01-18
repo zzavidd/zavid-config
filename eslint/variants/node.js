@@ -1,4 +1,4 @@
-const { baseRules, importEslintPlugin } = require('../rules');
+const { baseRules, importConfig } = require('../rules');
 
 module.exports = {
   extends: [
@@ -8,14 +8,15 @@ module.exports = {
   ],
   env: {
     node: true,
-    es6: true,
+    es2021: true,
   },
   plugins: ['import'],
+
   settings: {
-    ...importEslintPlugin.settings(),
+    ...importConfig.settings,
   },
   rules: {
     ...baseRules,
-    ...importEslintPlugin.rules,
+    ...importConfig.rules,
   },
 };
