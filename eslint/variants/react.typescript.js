@@ -3,6 +3,7 @@ const {
   importConfig,
   reactConfig,
   typescriptRules,
+  tsxRules,
 } = require('../rules');
 
 module.exports = {
@@ -34,11 +35,21 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: typescriptRules,
+    },
+    {
+      files: ['*.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: {
+        ...typescriptRules,
+        ...tsxRules,
+      },
     },
   ],
 };

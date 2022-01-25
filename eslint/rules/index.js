@@ -103,14 +103,10 @@ exports.reactConfig = {
 };
 
 /**
- * The rules allowed by the TypeScript ESLint plugin.
+ * The rules for TS files.
  * @type {import('eslint').Linter.RulesRecord}
  */
 exports.typescriptRules = {
-  '@typescript-eslint/explicit-module-boundary-types': 'off',
-  '@typescript-eslint/no-explicit-any': 'off',
-  '@typescript-eslint/no-namespace': 'off',
-  '@typescript-eslint/no-non-null-assertion': 'off',
   '@typescript-eslint/explicit-function-return-type': [
     'warn',
     {
@@ -121,4 +117,16 @@ exports.typescriptRules = {
       allowConciseArrowFunctionExpressionsStartingWithVoid: true,
     },
   ],
+  '@typescript-eslint/explicit-module-boundary-types': 'off',
+  '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/no-namespace': 'off',
+  '@typescript-eslint/no-non-null-assertion': 'off',
+};
+
+/**
+ * The rules for TSX files.
+ * @type {import('eslint').Linter.RulesRecord}
+ */
+exports.tsxRules = {
+  '@typescript-eslint/explicit-function-return-type': 'off',
 };
