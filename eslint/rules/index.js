@@ -63,7 +63,6 @@ exports.importConfig = {
       1,
       {
         groups: [
-          'type',
           ['external', 'builtin'],
           'internal',
           'parent',
