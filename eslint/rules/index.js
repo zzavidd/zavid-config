@@ -118,6 +118,7 @@ exports.typescriptRules = {
   ],
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/no-floating-promises': 'error',
   '@typescript-eslint/no-namespace': 'off',
   '@typescript-eslint/no-non-null-assertion': 'off',
 };
