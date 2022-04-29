@@ -15,3 +15,7 @@ export default function handler(
 function hello() {
   Promise.resolve();
 }
+
+(async () => {
+  await Promise.resolve();
+})();
