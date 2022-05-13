@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 
+import { Heading } from '../styles/Home.styles';
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -14,9 +16,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>
+        <Heading>
           Welcome to <a href={'https://nextjs.org'}>Next.js!</a>
-        </h1>
+        </Heading>
 
         <img />
 

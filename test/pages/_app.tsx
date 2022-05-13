@@ -4,7 +4,6 @@ import React from 'react';
 
 import '../styles/App.scss';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function TestApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
-export default MyApp;
