@@ -6,7 +6,8 @@
   "workspaces": [
     "eslint",
     "prettier",
-    "stylelint"
+    "stylelint",
+    "test"
   ],
   "scripts": {
     "publish": "lerna publish --force-publish --yes"
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/zzavidd/zavid-config#readme",
   "devDependencies": {
-    "lerna": "^3.22.1"
-  }
+    "lerna": "^4.0.0"
+  },
+  "packageManager": "yarn@3.2.1"
 }

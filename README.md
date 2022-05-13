@@ -7,7 +7,7 @@ The ESLint, Prettier and Stylelint configurations for TypeScript React projects 
 First, install all required dependencies for a full project:
 
 ```
-yarn add -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint stylelint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks stylelint-config-sass-guidelines
+yarn add -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint stylelint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks postcss stylelint-config-sass-guidelines stylelint-processor-styled-components stylelint-config-styled-components
 ```
 
 <details>
@@ -24,6 +24,24 @@ yarn add -D @zzavidd/eslint-config @zzavidd/prettier-config eslint prettier esli
 
 ```
 yarn add -D @zzavidd/eslint-config @zzavidd/prettier-config eslint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import
+```
+
+</details>
+
+<details>
+<summary>React TypeScript (SASS)</summary>
+
+```
+yarn add -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint prettier stylelint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks postcss stylelint-config-sass-guidelines
+```
+
+</details>
+
+<details>
+<summary>React TypeScript (Styled Components)</summary>
+
+```
+yarn add -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint prettier stylelint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks postcss stylelint-config-sass-guidelines stylelint-processor-styled-components stylelint-config-styled-components
 ```
 
 </details>
@@ -48,7 +66,7 @@ Although it's recommended to add your own `.eslintrc.js` file.
 /**
  * @type {import('eslint').Linter.Config}
  */
-const eslintConfig = {
+module.exports = {
   extends: '@zzavidd/eslint-config/react-ts',
   root: true,
   // If TypeScript is used.
@@ -57,8 +75,6 @@ const eslintConfig = {
     project: ['**/tsconfig.json'],
   },
 };
-
-module.exports = eslintConfig;
 ```
 
 ## Update configuration
