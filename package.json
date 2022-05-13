@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Formatting rules and configuration for projects worked on by Zavid.",
   "main": "index.js",
+  "workspaces": [
+    "eslint",
+    "prettier",
+    "stylelint"
+  ],
   "scripts": {
-    "release": "lerna publish --force-publish --yes"
+    "publish": "lerna publish --force-publish --yes"
   },
   "repository": {
     "type": "git",

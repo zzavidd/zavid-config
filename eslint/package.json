@@ -15,8 +15,8 @@
     "eslint-plugin-import": "^2.23.4"
   },
   "peerDependencies": {
-    "eslint": "^>=8.0.0",
-    "eslint-plugin-import": "^>=2.0.0"
+    "eslint": "*",
+    "eslint-plugin-import": "*"
   },
   "optionalDependencies": {
     "@types/react": ">=17.0.0",
