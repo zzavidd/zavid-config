@@ -41,7 +41,7 @@ yarn add -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-c
 <summary>React TypeScript (Styled Components)</summary>
 
 ```
-yarn add -D @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config eslint prettier stylelint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks postcss stylelint-config-sass-guidelines stylelint-processor-styled-components stylelint-config-styled-components
+yarn add -D @zzavidd/eslint-config @zzavidd/prettier-config eslint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-better-styled-components
 ```
 
 </details>
@@ -82,5 +82,5 @@ module.exports = {
 To force-update the installed configuration, run the following command:
 
 ```
-yarn upgrade @zzavidd/eslint-config@latest @zzavidd/stylelint-config@latest @zzavidd/prettier-config@latest
+yarn up @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config
 ```
