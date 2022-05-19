@@ -9,11 +9,6 @@ export default function handler(
   res: NextApiResponse<Data>
 ): void {
   res.status(200).json({ name: 'John Doe' });
-  hello();
-}
-
-function hello() {
-  Promise.resolve();
 }
 
 (async () => {

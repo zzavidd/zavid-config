@@ -4,6 +4,7 @@ const {
   reactConfig,
   typescriptRules,
   tsxRules,
+  otherRules,
 } = require('../rules');
 
 module.exports = {
@@ -23,7 +24,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'import'],
+  plugins: ['react', 'react-hooks', 'import', 'better-styled-components'],
   settings: {
     ...importConfig.settingsTypeScript,
     ...reactConfig.settings,
@@ -32,6 +33,7 @@ module.exports = {
     ...baseRules,
     ...importConfig.rules,
     ...reactConfig.rules,
+    ...otherRules
   },
   overrides: [
     {

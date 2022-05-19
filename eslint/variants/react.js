@@ -2,6 +2,7 @@ const {
   baseRules,
   importConfig,
   reactConfig,
+  otherRules,
 } = require('../rules');
 
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
     node: true,
     es2021: true,
   },
-  plugins: ['react', 'react-hooks', 'import'],
+  plugins: ['react', 'react-hooks', 'import', 'better-styled-components'],
   settings: {
     ...importConfig.settings,
     ...reactConfig.settings,
@@ -26,5 +27,6 @@ module.exports = {
     ...baseRules,
     ...importConfig.rules,
     ...reactConfig.rules,
+    ...otherRules
   },
 };

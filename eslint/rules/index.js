@@ -3,7 +3,9 @@
  * @type {import('eslint').Linter.RulesRecord}
  */
 exports.baseRules = {
+  'constructor-super': 'error',
   'eol-last': [1, 'always'],
+  'no-await-in-loop': 'error',
   'no-case-declarations': 'off',
   'no-console': [
     'warn',
@@ -17,6 +19,9 @@ exports.baseRules = {
       max: 1,
     },
   ],
+  'no-new-func': 'error',
+  'no-new-object': 'error',
+  'no-return-await': 'warn',
   'no-unreachable': 'warn',
   'no-unused-vars': 'off',
   'no-useless-escape': 'off',
@@ -88,7 +93,7 @@ exports.importConfig = {
 exports.reactConfig = {
   settings: {
     react: {
-      version: 'latest',
+      version: 'detect',
     },
   },
   rules: {
@@ -105,7 +110,19 @@ exports.reactConfig = {
  * The rules for TS files.
  * @type {import('eslint').Linter.RulesRecord}
  */
+
+/**
+ * @type {import('@typescript-eslint/eslint-plugin')}
+ */
 exports.typescriptRules = {
+  '@typescript-eslint/await-thenable': 'warn',
+  '@typescript-eslint/consistent-type-imports': 'warn',
+  '@typescript-eslint/consistent-type-exports': [
+    'warn',
+    {
+      fixMixedExportsWithInlineTypeSpecifier: true,
+    },
+  ],
   '@typescript-eslint/explicit-function-return-type': [
     'warn',
     {
@@ -116,7 +133,15 @@ exports.typescriptRules = {
       allowConciseArrowFunctionExpressionsStartingWithVoid: true,
     },
   ],
+  '@typescript-eslint/explicit-member-accessibility': [
+    'warn',
+    {
+      accessibility: 'explicit',
+    },
+  ],
   '@typescript-eslint/explicit-module-boundary-types': 'off',
+  '@typescript-eslint/member-ordering': ['warn', {}],
+  '@typescript-eslint/no-confusing-void-expression': 'warn',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/no-floating-promises': [
     'error',
@@ -134,4 +159,12 @@ exports.typescriptRules = {
  */
 exports.tsxRules = {
   '@typescript-eslint/explicit-function-return-type': 'off',
+};
+
+/**
+ * Miscellaneous rules.
+ * @type {import('eslint').Linter.RulesRecord}
+ */
+exports.otherRules = {
+  'better-styled-components/sort-declarations-alphabetically': 'warn',
 };

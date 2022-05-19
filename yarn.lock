@@ -1771,10 +1771,11 @@ __metadata:
     "@typescript-eslint/parser": ">=5.0.0"
     eslint: ^8.7.0
     eslint-import-resolver-typescript: ">=2.5.0"
+    eslint-plugin-better-styled-components: ">=1.1.2"
     eslint-plugin-react: ">=7.28.0"
     eslint-plugin-react-hooks: ">=4.0.0"
     react: ">=17.0.0"
-    typescript: ">=4.5.4"
+    typescript: ^4.6.4
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
@@ -1786,6 +1787,8 @@ __metadata:
     "@typescript-eslint/parser":
       optional: true
     eslint-import-resolver-typescript:
+      optional: true
+    eslint-plugin-better-styled-components:
       optional: true
     eslint-plugin-react:
       optional: true
@@ -3756,6 +3759,16 @@ __metadata:
     debug: ^3.2.7
     find-up: ^2.1.0
   checksum: 77048263f309167a1e6a1e1b896bfb5ddd1d3859b2e2abbd9c32c432aee13d610d46e6820b1ca81b37fba437cf423a404bc6649be64ace9148a3062d1886a678
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-better-styled-components@npm:>=1.1.2, eslint-plugin-better-styled-components@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "eslint-plugin-better-styled-components@npm:1.1.2"
+  dependencies:
+    postcss: ^7.0.2
+    requireindex: ~1.1.0
+  checksum: c03a7c13b16fc527d70f558469345c04a92773e9e777a2e601ba81dafb133bc44c86c1e7d9794d1f2ea7618b80bc5a554ff01136b311e0f29af88a908c6c36ec
   languageName: node
   linkType: hard
 
@@ -7421,7 +7434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^7.0.26":
+"postcss@npm:^7.0.2, postcss@npm:^7.0.26":
   version: 7.0.39
   resolution: "postcss@npm:7.0.39"
   dependencies:
@@ -7702,6 +7715,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^18.1.0":
+  version: 18.1.0
+  resolution: "react-is@npm:18.1.0"
+  checksum: d206a0fe6790851bff168727bfb896de02c5591695afb0c441163e8630136a3e13ee1a7ddd59fdccddcc93968b4721ae112c10f790b194b03b35a3dc13a355ef
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:0.8.3":
   version: 0.8.3
   resolution: "react-refresh@npm:0.8.3"
@@ -7966,6 +7986,13 @@ __metadata:
   version: 2.0.2
   resolution: "require-from-string@npm:2.0.2"
   checksum: a03ef6895445f33a4015300c426699bc66b2b044ba7b670aa238610381b56d3f07c686251740d575e22f4c87531ba662d06937508f0f3c0f1ddc04db3130560b
+  languageName: node
+  linkType: hard
+
+"requireindex@npm:~1.1.0":
+  version: 1.1.0
+  resolution: "requireindex@npm:1.1.0"
+  checksum: 397057d97d7f753a3851abf0d6db94c295bd8254536f71f622b896ba08ea8c0d3e3771c8b009a557e6ce602f4245c0588836cdf59c4ce588fff721a7b855d323
   languageName: node
   linkType: hard
 
@@ -9095,6 +9122,7 @@ __metadata:
     eslint: ^8.7.0
     eslint-config-next: 12.0.8
     eslint-import-resolver-typescript: ^2.5.0
+    eslint-plugin-better-styled-components: ^1.1.2
     eslint-plugin-import: ^2.24.2
     eslint-plugin-react: ^7.25.1
     next: 11.1.2
@@ -9102,12 +9130,13 @@ __metadata:
     prettier: ^2.3.2
     react: 17.0.2
     react-dom: 17.0.2
+    react-is: ^18.1.0
     styled-components: ^5.3.5
     stylelint: ^14.2.0
     stylelint-config-sass-guidelines: ^9.0.1
     stylelint-config-styled-components: ^0.1.1
     stylelint-processor-styled-components: ^1.10.0
-    typescript: 4.5.4
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -9385,17 +9414,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.5.4":
-  version: 4.5.4
-  resolution: "typescript@npm:4.5.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 59f3243f9cd6fe3161e6150ff6bf795fc843b4234a655dbd938a310515e0d61afd1ac942799e7415e4334255e41c2c49b7dd5d9fd38a17acd25a6779ca7e0961
-  languageName: node
-  linkType: hard
-
-"typescript@npm:>=4.5.4":
+"typescript@npm:^4.6.4":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -9405,17 +9424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.5.4#~builtin<compat/typescript>":
-  version: 4.5.4
-  resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=7ad353"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: eda87927f9cfb94aca9b5e47842daf37347ad3073133e17f556fbb6c18f3493c5b551eedab0f4b26774235ddb7acbe0087250d5285f72ce6819a0891dd5a74ed
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@>=4.5.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=7ad353"
   bin:
