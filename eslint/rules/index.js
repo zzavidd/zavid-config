@@ -1,3 +1,5 @@
+const memberOrdering = require('./member-ordering');
+
 /**
  * The base rules available without plugins.
  * @type {import('eslint').Linter.RulesRecord}
@@ -137,10 +139,18 @@ exports.typescriptRules = {
     'warn',
     {
       accessibility: 'explicit',
+      overrides: {
+        constructors: 'no-public'
+      }
     },
   ],
   '@typescript-eslint/explicit-module-boundary-types': 'off',
-  '@typescript-eslint/member-ordering': ['warn', {}],
+  '@typescript-eslint/member-ordering': [
+    'warn',
+    {
+      default: memberOrdering,
+    },
+  ],
   '@typescript-eslint/no-confusing-void-expression': 'warn',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/no-floating-promises': [
