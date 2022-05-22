@@ -151,7 +151,7 @@ exports.typescriptRules = {
       default: memberOrdering,
     },
   ],
-  '@typescript-eslint/no-confusing-void-expression': 'warn',
+  '@typescript-eslint/no-confusing-void-expression': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/no-floating-promises': [
     'error',
