@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/stylelint-config",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Stylelint configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "devDependencies": {
