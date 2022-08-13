@@ -6,7 +6,8 @@ const memberOrdering = require('./member-ordering');
  */
 exports.baseRules = {
   'constructor-super': 'error',
-  'eol-last': [1, 'always'],
+  'eol-last': ['warn', 'always'],
+  'func-style': ['warn', 'declaration', { allowArrowFunctions: false }],
   'no-await-in-loop': 'error',
   'no-case-declarations': 'off',
   'no-console': [
