@@ -100,6 +100,7 @@ exports.reactConfig = {
   },
   rules: {
     'react/display-name': 'off',
+    'react/function-component-definition': 'warn',
     'react/jsx-curly-brace-presence': [
       'warn',
       { props: 'always', children: 'ignore' },
