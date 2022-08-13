@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/eslint-config",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "license": "MIT",
   "prettier": "../prettier/index.js",
