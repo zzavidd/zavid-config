@@ -28,8 +28,8 @@ exports.baseRules = {
   'no-unused-vars': 'off',
   'no-useless-escape': 'off',
   'require-await': 'warn',
-  quotes: 'off',
-  semi: ['error', 'always'],
+  'quotes': 'off',
+  'semi': ['error', 'always'],
   'spaced-comment': [
     'warn',
     'always',
@@ -69,20 +69,20 @@ exports.importConfig = {
     'import/order': [
       1,
       {
-        groups: [
+        'groups': [
           ['external', 'builtin'],
           'internal',
           'parent',
           'sibling',
           'index',
         ],
-        pathGroupsExcludedImportTypes: ['internal'],
+        'pathGroupsExcludedImportTypes': ['internal'],
         'newlines-between': 'always',
-        alphabetize: {
+        'alphabetize': {
           order: 'asc',
           caseInsensitive: true,
         },
-        warnOnUnassignedImports: true,
+        'warnOnUnassignedImports': true,
       },
     ],
   },
@@ -104,6 +104,8 @@ exports.reactConfig = {
       'warn',
       { props: 'always', children: 'ignore' },
     ],
+    'react/jsx-fragments': ['warn', 'element'],
+    'react/no-unused-state': 'warn',
     'react/prop-types': 'off',
   },
 };
@@ -140,8 +142,8 @@ exports.typescriptRules = {
     {
       accessibility: 'explicit',
       overrides: {
-        constructors: 'no-public'
-      }
+        constructors: 'no-public',
+      },
     },
   ],
   '@typescript-eslint/explicit-module-boundary-types': 'off',

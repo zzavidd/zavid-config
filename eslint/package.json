@@ -3,6 +3,7 @@
   "version": "1.4.2",
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "license": "MIT",
+  "prettier": "../prettier/index.js",
   "exports": {
     ".": "./variants/react.typescript.js",
     "./node-js": "./variants/node.js",
