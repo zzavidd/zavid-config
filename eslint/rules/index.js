@@ -120,13 +120,14 @@ exports.reactConfig = {
  */
 exports.typescriptRules = {
   '@typescript-eslint/await-thenable': 'warn',
-  '@typescript-eslint/consistent-type-imports': 'warn',
+  '@typescript-eslint/consistent-type-definitions': 'warn',
   '@typescript-eslint/consistent-type-exports': [
     'warn',
     {
       fixMixedExportsWithInlineTypeSpecifier: true,
     },
   ],
+  '@typescript-eslint/consistent-type-imports': 'warn',
   '@typescript-eslint/explicit-function-return-type': [
     'warn',
     {
