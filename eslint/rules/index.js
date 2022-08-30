@@ -23,7 +23,7 @@ exports.baseRules = {
   ],
   'no-new-func': 'error',
   'no-new-object': 'error',
-  'no-return-await': 'warn',
+  'no-return-await': 'off',
   'no-unreachable': 'warn',
   'no-unused-vars': 'off',
   'no-useless-escape': 'off',
@@ -63,9 +63,10 @@ exports.importConfig = {
     },
   },
   rules: {
-    'import/named': 0,
-    'import/namespace': 0,
-    'import/no-unresolved': ['error'],
+    'import/named': 'off',
+    'import/namespace': 'off',
+    'import/no-anonymous-default-export': 'warn',
+    'import/no-unresolved': 'error',
     'import/order': [
       1,
       {
@@ -108,6 +109,7 @@ exports.reactConfig = {
     'react/jsx-fragments': ['warn', 'element'],
     'react/no-unused-state': 'warn',
     'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'warn',
   },
 };
 
@@ -156,6 +158,7 @@ exports.typescriptRules = {
     },
   ],
   '@typescript-eslint/no-confusing-void-expression': 'off',
+  '@typescript-eslint/no-empty-function': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/no-floating-promises': [
     'error',
