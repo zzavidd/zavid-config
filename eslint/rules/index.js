@@ -151,12 +151,7 @@ exports.typescriptRules = {
     },
   ],
   '@typescript-eslint/explicit-module-boundary-types': 'off',
-  '@typescript-eslint/member-ordering': [
-    'warn',
-    {
-      default: memberOrdering,
-    },
-  ],
+  '@typescript-eslint/member-ordering': ['warn'],
   '@typescript-eslint/no-confusing-void-expression': 'off',
   '@typescript-eslint/no-empty-function': 'off',
   '@typescript-eslint/no-explicit-any': 'off',

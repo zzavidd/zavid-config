@@ -12,7 +12,7 @@
     "./react-ts": "./variants/react.typescript.js"
   },
   "devDependencies": {
-    "eslint": "^8.7.0"
+    "eslint": "^8.29.0"
   },
   "peerDependencies": {
     "eslint": "*",
@@ -20,12 +20,12 @@
   },
   "optionalDependencies": {
     "@types/react": ">=17.0.0",
-    "@typescript-eslint/eslint-plugin": ">=5.0.0",
-    "@typescript-eslint/parser": ">=5.0.0",
-    "eslint-import-resolver-typescript": ">=2.5.0",
-    "eslint-plugin-better-styled-components": ">=1.1.2",
-    "eslint-plugin-react": ">=7.28.0",
-    "eslint-plugin-react-hooks": ">=4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-better-styled-components": "^1.1.2",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "react": ">=17.0.0",
     "typescript": "^4.6.4"
   },
