@@ -82,5 +82,10 @@ module.exports = {
 To force-update the installed configuration, run the following command:
 
 ```
+yarn up @zzavidd/eslint-config @zzavidd/prettier-config
+```
+
+Or with Stylelint:
+```
 yarn up @zzavidd/eslint-config @zzavidd/stylelint-config @zzavidd/prettier-config
 ```
