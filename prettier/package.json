@@ -1,6 +1,6 @@
 {
   "name": "@zzavidd/prettier-config",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "Prettier configuration for projects developed by Zavid Egbue.",
   "main": "index.js",
   "devDependencies": {
