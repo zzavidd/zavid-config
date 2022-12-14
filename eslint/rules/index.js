@@ -1,5 +1,3 @@
-const memberOrdering = require('./member-ordering');
-
 /**
  * The base rules available without plugins.
  * @type {import('eslint').Linter.RulesRecord}
