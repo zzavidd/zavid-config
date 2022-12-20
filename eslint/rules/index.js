@@ -81,7 +81,7 @@ exports.importConfig = {
           order: 'asc',
           caseInsensitive: true,
         },
-        'warnOnUnassignedImports': true,
+        'warnOnUnassignedImports': false,
       },
     ],
   },
