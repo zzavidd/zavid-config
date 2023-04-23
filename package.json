@@ -2,13 +2,6 @@
   "name": "@zzavidd/config",
   "version": "1.0.0",
   "description": "Formatting rules and configuration for projects worked on by Zavid.",
-  "packageManager": "yarn@3.2.1",
-  "workspaces": [
-    "eslint",
-    "prettier",
-    "stylelint",
-    "test"
-  ],
   "scripts": {
     "publish": "lerna publish --force-publish --yes"
   },
@@ -23,6 +16,6 @@
   },
   "homepage": "https://github.com/zzavidd/zavid-config#readme",
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^6.6.1"
   }
 }
