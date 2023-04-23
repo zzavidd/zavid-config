@@ -107,7 +107,7 @@ exports.reactConfig = {
     'react/jsx-fragments': ['warn', 'element'],
     'react/no-unused-state': 'warn',
     'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'warn',
+    'react/react-in-jsx-scope': 'off',
   },
 };
 
