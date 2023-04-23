@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Formatting rules and configuration for projects worked on by Zavid.",
   "scripts": {
-    "publish": "lerna publish --force-publish --yes"
+    "release": "lerna publish --force-publish --yes"
   },
   "repository": {
     "type": "git",
