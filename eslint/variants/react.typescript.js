@@ -10,6 +10,7 @@ const {
 module.exports = {
   extends: [
     'eslint:recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:import/errors',
@@ -33,7 +34,7 @@ module.exports = {
     ...baseRules,
     ...importConfig.rules,
     ...reactConfig.rules,
-    ...otherRules
+    ...otherRules,
   },
   overrides: [
     {
