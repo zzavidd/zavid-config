@@ -26,15 +26,9 @@ exports.baseRules = {
   'no-unused-vars': 'off',
   'no-useless-escape': 'off',
   'require-await': 'warn',
-  'quotes': 'off',
+  'quotes': ['warn', 'single', { avoidEscape: true }],
   'semi': ['error', 'always'],
-  'spaced-comment': [
-    'warn',
-    'always',
-    {
-      exceptions: ['*'],
-    },
-  ],
+  'spaced-comment': 'off',
 };
 
 /**
@@ -64,7 +58,7 @@ exports.importConfig = {
     'import/named': 'off',
     'import/namespace': 'off',
     'import/no-anonymous-default-export': 'warn',
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': ['error', { ignore: ['bun:test'] }],
     'import/order': [
       1,
       {
@@ -107,7 +101,7 @@ exports.reactConfig = {
     'react/jsx-fragments': ['warn', 'element'],
     'react/no-unused-state': 'warn',
     'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'warn',
+    'react/react-in-jsx-scope': 'off',
   },
 };
 
@@ -128,7 +122,10 @@ exports.typescriptRules = {
       fixMixedExportsWithInlineTypeSpecifier: true,
     },
   ],
-  '@typescript-eslint/consistent-type-imports': 'warn',
+  '@typescript-eslint/consistent-type-imports': [
+    'warn',
+    { fixStyle: 'inline-type-imports' },
+  ],
   '@typescript-eslint/explicit-function-return-type': [
     'warn',
     {

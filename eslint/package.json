@@ -4,6 +4,9 @@
   "description": "ESLint configuration for projects developed by Zavid Egbue.",
   "license": "MIT",
   "prettier": "../prettier/index.js",
+  "eslintConfig": {
+    "extends": "./variants/node.js"
+  },
   "exports": {
     ".": "./variants/react.typescript.js",
     "./node-js": "./variants/node.js",

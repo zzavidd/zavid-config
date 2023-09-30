@@ -68,8 +68,6 @@ Although it's recommended to add your own `.eslintrc.js` file.
  */
 module.exports = {
   extends: '@zzavidd/eslint-config/react-ts',
-  root: true,
-  // If TypeScript is used.
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['**/tsconfig.json'],

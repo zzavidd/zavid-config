@@ -12,9 +12,7 @@ module.exports = {
   },
   plugins: ['import'],
 
-  settings: {
-    ...importConfig.settings,
-  },
+  settings: importConfig.settings,
   rules: {
     ...baseRules,
     ...importConfig.rules,

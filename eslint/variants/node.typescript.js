@@ -1,8 +1,4 @@
-const {
-  baseRules,
-  typescriptRules,
-  importConfig,
-} = require('../rules');
+const { baseRules, typescriptRules, importConfig } = require('../rules');
 
 module.exports = {
   extends: [
@@ -15,9 +11,7 @@ module.exports = {
     es2021: true,
   },
   plugins: ['import'],
-  settings: {
-    ...importConfig.settingsTypeScript,
-  },
+  settings: importConfig.settingsTypeScript,
   rules: {
     ...baseRules,
     ...importConfig.rules,
